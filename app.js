@@ -1,0 +1,9 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Чебоксары AutoMarket</title><link rel="stylesheet" href="style.css"></head><body>
+<header><b>🚗 Cheboksary AutoMarket</b><span>Чебоксары</span><nav><button onclick="show('market')">Рынок</button><button onclick="show('garage')">Мой гараж</button><button onclick="show('shop')">Магазин</button><button onclick="show('profile')">Профиль</button><button id="adminBtn" onclick="show('admin')" hidden>Админ</button></nav><strong id="money">₽0</strong></header>
+<section id="auth" class="center"><div class="panel"><h1>Добро пожаловать</h1><p>Создай игрока и начни автомобильный бизнес в Чебоксарах.</p><input id="u" placeholder="Логин"><input id="p" type="password" placeholder="Пароль"><button class="main" onclick="register()">Начать игру — ₽100 000</button><button onclick="login()">Войти</button><small>Админ по умолчанию: admin / admin123</small></div></section>
+<main id="app" hidden><div id="market" class="page"><h1>Автомобильный рынок</h1><div id="cars" class="grid"></div></div>
+<div id="garage" class="page" hidden><h1>Мой гараж</h1><div id="mycars" class="grid"></div><h2>Улучшить гараж</h2><div id="garages" class="grid"></div></div>
+<div id="shop" class="page" hidden><h1>Магазин предметов</h1><div id="items" class="grid"></div></div>
+<div id="profile" class="page" hidden><div class="panel"><h1>Профиль</h1><div id="prof"></div></div></div>
+<div id="admin" class="page" hidden><h1>Админ-панель</h1><div class="panel"><p>Выдавай игрокам деньги и предметы.</p><div id="users"></div></div></div></main>
+<script src="/socket.io/socket.io.js"></script><script src="app.js"></script></body></html>
